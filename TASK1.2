@@ -1,0 +1,19 @@
+Module Module1
+
+    Sub Main()
+        Dim membername As String
+        Dim Id As Integer
+
+        FileOpen(1, "D:\members.txt", OpenMode.Input)
+        Do
+            Input(1, membername)
+            Console.Write("Member Name: " & membername)
+            Input(1, Id)
+            Console.Write("Member Id: " & Id)
+        Loop Until EOF(1)
+        FileClose(1)
+        Console.ReadKey(1)
+
+    End Sub
+
+End Module
