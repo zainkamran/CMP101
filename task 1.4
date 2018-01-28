@@ -1,0 +1,25 @@
+Module Module1
+
+    Sub Main()
+        Dim members As String
+        Dim id As Integer
+        Dim choice As Integer = 1
+
+        FileOpen(1, "C:\SCmembers.txt", OpenMode.Append)
+        Do
+            Console.WriteLine("enter member's name: ")
+            members = Console.ReadLine()
+            Console.WriteLine("enter member's id: ")
+            id = Console.ReadLine()
+
+            Write(1, members)
+            Write(1, id)
+
+            Console.WriteLine("enter 0 to stop input, or enter any other digit: ")
+            choice = Console.ReadLine()
+        Loop Until choice = 0
+        FileClose(1)
+
+    End Sub
+
+End Module
